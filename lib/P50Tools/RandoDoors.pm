@@ -6,8 +6,8 @@ use Moose;
 
 has 'target' => (is => 'rw', isa => 'Str');
 has 'ini' => (is => 'rw', isa => 'Str', default => 1);
-has 'end' => (is => 'rw', isa => 'Str', default => 50000);
-has 'timeout' => (is => 'rw', isa => 'Str', default => 2);
+has 'end' => (is => 'rw', isa => 'Str', default => 65000);
+has 'timeout' => (is => 'rw', isa => 'Str', default => 20);
 
 
 sub scan{
@@ -40,3 +40,7 @@ no Moose;
 
 1;
 	
+__END__
+=head1 
+For more information go to L<P50Tools>.
+=cut

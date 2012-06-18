@@ -47,4 +47,9 @@ sub scan{
 }
 no Moose;
 1;
-		
+
+__END__
+
+=head1 
+For more information go to L<P50Tools>.
+=cut

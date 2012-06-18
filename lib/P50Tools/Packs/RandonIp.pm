@@ -9,3 +9,7 @@ sub new {
 }
 
 1;
+
+=head1 
+For more information go to L<P50Tools>.
+=cut

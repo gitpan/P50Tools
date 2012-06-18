@@ -1,16 +1,41 @@
 package P50Tools::Packs;
 
+if ($^O eq m/MSW/gi) {
+	print "you cannot use this\n";
+	print "you can modified this package but you will need Net::RawIP, but this package require libcarp, and it's is incompatible with Windows\n"; 
+	exit 0;
+}
+
+unless ($< == 0) {
+	print "It is recommended to run this Tool as Root User\n\nDo you Would you like to change your Permissions to ROOT?\n";
+	print "[yes/no]";
+	chomp (my $choice = <>);
+	my $work = 1;
+	while ($work == 1){
+		if ($choice eq 'yes'){
+			system ('sudo perl ' . $0);
+			system ('clear');
+			exit;
+			$work = 0;
+		}
+		elsif ($choice eq 'no'){
+			print "This package can be a bed performing\n";
+			system ('clear');
+			$work = 0;
+		}
+		else{
+			print "ERROR!\nType only 'yes' or 'no'\n";
+			$choice = <>;
+			chomp $choice;
+		}
+	}
+}
+
 use common::sense;
 use Net::RawIP;
 use Packs::PacksSize;
 use Packs::RandonIp;
 use Moose;
-
-if ($^O !~ m/MSW/gi) {
-	print "you cannot use this\n";
-	print "you can modified this package but you will need Net::RawIP, but this package require libcarp, and it's is incompatible with Windows\n"; 
-	exit 0;
-}
 
 has 'target' => (is => 'rw', isa => 'Str');
 has 'door' => (is => 'rw', isa => 'Str', default => 80);
@@ -45,3 +70,8 @@ sub send{
 }
 no Moose;
 1;
+
+__END__
+=head1 
+For more information go to L<P50Tools>.
+=cut

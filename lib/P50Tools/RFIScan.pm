@@ -7,6 +7,10 @@ use Moose;
 use HTTP::Request;
 use LWP::UserAgent;
 
+=head1 
+For more information go to L<P50Tools>.
+=cut
+
 our @string;
 has 'target' => (is => 'rw', isa => 'Str');
 has 'string_list' => (is => 'rw', 
