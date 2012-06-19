@@ -11,7 +11,7 @@ use P50Tools::AdminFinder;
 
 {
     no strict "vars";
-    $VERSION = '0.6';
+    $VERSION = '0.62';
 }
 
 if ($^O ne m/MSW/gi) {require P50Tools::Packs}
@@ -24,11 +24,11 @@ __END__
 
 =head1 NAME
 
-Net::RawIP - This tool is just to work with pen-test, but to study to.
+P50Tools - This tool is just to work with pen-test, but to study to.
 
 =head1 VERSION
 
-This is the documentation of C<Net::RawIP> version 0.6
+This is the documentation of C<P50Tools> version 0.62
 
 =head1 SYNOPSIS
 
@@ -78,7 +78,7 @@ $p->end(82);
 # $p->timeout(20); this method can be used optionally
 $p->scan;
 
-########Search open doors in a target########
+########Stress test########
 use P50Tools;
 
 my $p = P50Tools::Packs->new();

@@ -25,7 +25,7 @@ my %WriteMakefileArgs = (
     "Moose" => 0,
     "common::sense" => 0
   },
-  "VERSION" => "0.6",
+  "VERSION" => "0.62",
   "test" => {
     "TESTS" => ""
   }

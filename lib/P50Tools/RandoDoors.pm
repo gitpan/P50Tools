@@ -4,6 +4,11 @@ use common::sense;
 use IO::Socket::INET;
 use Moose;
 
+{
+    no strict "vars";
+    $VERSION = '0.2';
+}
+
 has 'target' => (is => 'rw', isa => 'Str');
 has 'ini' => (is => 'rw', isa => 'Str', default => 1);
 has 'end' => (is => 'rw', isa => 'Str', default => 65000);

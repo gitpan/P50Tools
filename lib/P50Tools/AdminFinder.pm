@@ -2,10 +2,14 @@ package P50Tools::AdminFinder;
 
 use warnings;
 use common::sense;
-use lib 'Strings';
 use Moose;
 use HTTP::Request;
 use LWP::UserAgent;
+
+{
+    no strict "vars";
+    $VERSION = '0.2';
+}
 
 =head1 
 For more information go to L<P50Tools>.

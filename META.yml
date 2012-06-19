@@ -17,4 +17,4 @@ requires:
   LWP::UserAgent: 0
   Moose: 0
   common::sense: 0
-version: 0.6
+version: 0.62

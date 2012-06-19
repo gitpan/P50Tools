@@ -6,6 +6,11 @@ use Moose;
 use HTTP::Request;
 use LWP::UserAgent;
 
+{
+    no strict "vars";
+    $VERSION = '0.1';
+}
+
 has 'target_list' => (is => 'rw', isa => 'Str');
 has 'output' => (is => 'rw', isa => 'Str', default => 'output.txt');
 

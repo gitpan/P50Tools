@@ -1,5 +1,10 @@
 package P50Tools::Packs;
 
+{
+    no strict "vars";
+    $VERSION = '0.3';
+}
+
 if ($^O eq m/MSW/gi) {
 	print "you cannot use this\n";
 	print "you can modified this package but you will need Net::RawIP, but this package require libcarp, and it's is incompatible with Windows\n"; 
